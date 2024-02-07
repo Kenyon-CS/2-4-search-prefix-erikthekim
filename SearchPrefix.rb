@@ -1,7 +1,7 @@
-def searchPrefix(arr,s)
-
+def searchPrefix(arr, s)
+  arr.uniq.select { |n| n.start_with?(s) }.inspect
 end
 
-print(searchPrefix(["abcde", "abdf", "adeab", "abdgse", "bdefa", "bacdef"],"ab"))
+puts searchPrefix(%w[abcde abdf adeab abdgse bdefa bacdef], 'ab')
 
-print(searchPrefix(["abcde", "abdf", "adeab", "abdgse", "bdefa", "bacdef"],"b"))
+puts searchPrefix(%w[abcde abdf adeab abdgse bdefa bacdef], 'b')
